@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramiat International — PP Woven & Non-Woven Bags, LDPE Shrink Film, Flexible Packaging, Surface Protection Film, Plastic Resins</title>
+<meta name="description" content="Ramiat International trades PP woven bags, PP non-woven bags, LDPE shrink film, flexible packaging, surface protection film and plastic resins.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEEFE7;
+    --paper-2:#E4E6DA;
+    --ink:#1B211E;
+    --steel:#2B4A63;
+    --amber:#E2A030;
+    --line:#9AA398;
+    --line-soft:#C7CBBC;
+    --white:#FAFAF6;
+    --radius:2px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .mono{font-family:'IBM Plex Mono', monospace;}
+
+  h1,h2,h3{
+    font-family:'Big Shoulders Display', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    line-height:1;
+    color:var(--ink);
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- ticks / dimension marks (signature motif) ---------- */
+  .tick-frame{
+    position:relative;
+  }
+  .tick-frame::before,
+  .tick-frame::after{
+    content:"";
+    position:absolute;
+    width:14px;
+    height:14px;
+    border:1.5px solid var(--steel);
+    opacity:.55;
+  }
+  .tick-frame::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+  .tick-frame::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(238,239,231,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 0;
+    gap:16px;
+  }
+  .brand{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+  }
+  .brand-mark{
+    font-family:'Big Shoulders Display', sans-serif;
+    font-weight:800;
+    font-size:22px;
+    letter-spacing:0.02em;
+  }
+  .brand-sub{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:0.14em;
+    color:var(--steel);
+    text-transform:uppercase;
+  }
+  .nav-links{
+    display:flex;
+    gap:28px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+  }
+  .nav-links a{
+    position:relative;
+    padding-bottom:3px;
+    border-bottom:1px solid transparent;
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .nav-links a:hover{border-color:var(--amber);color:var(--steel);}
+  .nav-cta{
+    display:inline-block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    background:var(--ink);
+    color:var(--white);
+    padding:9px 16px;
+    border-radius:var(--radius);
+  }
+  .nav-toggle{display:none;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding:88px 0 64px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:48px;
+    align-items:end;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--steel);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:26px;height:1px;background:var(--amber);
+  }
+  .hero h1{
+    font-size:clamp(44px, 7vw, 88px);
+    font-weight:800;
+  }
+  .hero h1 .accent{color:var(--steel);}
+  .hero-desc{
+    margin-top:22px;
+    max-width:46ch;
+    font-size:17px;
+    color:#3A423E;
+  }
+  .hero-actions{
+    margin-top:30px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:13px 22px;
+    border-radius:var(--radius);
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:transform .18s ease, background .18s ease;
+  }
+  .btn-primary{background:var(--ink);color:var(--white);}
+  .btn-primary:hover{background:var(--steel);transform:translateY(-2px);}
+  .btn-ghost{border:1px solid var(--ink);color:var(--ink);}
+  .btn-ghost:hover{background:var(--ink);color:var(--white);transform:translateY(-2px);}
+
+  /* manifest list */
+  .manifest{
+    border:1px solid var(--line-soft);
+    background:var(--white);
+    padding:20px 22px;
+  }
+  .manifest-head{
+    display:flex;
+    justify-content:space-between;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--steel);
+    border-bottom:1px dashed var(--line-soft);
+    padding-bottom:10px;
+    margin-bottom:10px;
+  }
+  .manifest-item{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    padding:9px 0;
+    border-bottom:1px solid var(--paper-2);
+  }
+  .manifest-item:last-child{border-bottom:none;}
+  .manifest-item span:first-child{color:var(--ink);}
+  .manifest-item span:last-child{color:var(--steel);}
+
+  .stamp{
+    position:absolute;
+    top:74px;
+    right:36px;
+    transform:rotate(8deg);
+    border:2px solid var(--amber);
+    color:var(--amber);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    padding:6px 10px;
+    border-radius:4px;
+    opacity:.85;
+  }
+
+  /* ---------- section shell ---------- */
+  section{padding:80px 0;}
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    margin-bottom:44px;
+    flex-wrap:wrap;
+  }
+  .section-num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--steel);
+    letter-spacing:.1em;
+  }
+  .section-head h2{
+    font-size:clamp(30px, 4.4vw, 46px);
+  }
+  .section-note{
+    max-width:34ch;
+    font-size:14px;
+    color:#4A524D;
+  }
+
+  hr.rule{
+    border:none;
+    border-top:1px solid var(--line-soft);
+    margin:0 0 80px;
+  }
+
+  /* ---------- about ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:56px;
+  }
+  .about-copy p + p{margin-top:14px;}
+  .about-copy{font-size:15.5px;color:#333B36;}
+  .specs-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px 24px;
+  }
+  .spec{
+    border-top:1px solid var(--line-soft);
+    padding-top:12px;
+  }
+  .spec .spec-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--steel);
+    display:block;
+    margin-bottom:6px;
+  }
+  .spec .spec-value{
+    font-size:15px;
+    font-weight:500;
+  }
+
+  /* ---------- products ---------- */
+  .product-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--line-soft);
+    border:1px solid var(--line-soft);
+  }
+  .product-card{
+    background:var(--paper);
+    padding:30px 26px 26px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    opacity:0;
+    transform:translateY(16px);
+    transition:opacity .55s ease, transform .55s ease, background .25s ease;
+  }
+  .product-card.in{opacity:1;transform:translateY(0);}
+  .product-card:hover{background:var(--white);}
+  .product-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+  }
+  .product-code{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--steel);
+    letter-spacing:.06em;
+  }
+  .product-icon{
+    width:100%;
+    height:118px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--white);
+    border:1px dashed var(--line-soft);
+  }
+  .product-icon svg{width:82%;height:82%;}
+  .product-card h3{
+    font-size:23px;
+    letter-spacing:.01em;
+  }
+  .product-card p{
+    font-size:13.8px;
+    color:#454D48;
+    flex-grow:1;
+  }
+  .tag-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:2px;
+  }
+  .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    border:1px solid var(--line-soft);
+    color:var(--steel);
+    padding:4px 8px;
+    border-radius:20px;
+  }
+
+  /* ---------- contact ---------- */
+  .contact-panel{
+    background:var(--ink);
+    color:var(--white);
+    padding:64px 0;
+  }
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+  }
+  .contact-panel .eyebrow{color:var(--amber);}
+  .contact-panel h2{color:var(--white);font-size:clamp(30px,4.4vw,46px);}
+  .contact-desc{
+    margin-top:16px;
+    max-width:44ch;
+    color:#C7CCC5;
+    font-size:15px;
+  }
+  .contact-list{margin-top:32px;}
+  .contact-row{
+    display:flex;
+    gap:16px;
+    padding:16px 0;
+    border-top:1px solid #333B34;
+  }
+  .contact-row:last-child{border-bottom:1px solid #333B34;}
+  .contact-row .label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--amber);
+    width:110px;
+    flex-shrink:0;
+    padding-top:2px;
+  }
+  .contact-row .value{
+    font-size:16px;
+  }
+  .contact-row .value a:hover{color:var(--amber);}
+  .contact-row .value small{
+    display:block;
+    color:#9AA398;
+    font-size:12.5px;
+    margin-top:3px;
+  }
+
+  .form-card{
+    background:var(--paper);
+    color:var(--ink);
+    padding:30px;
+    border-radius:var(--radius);
+  }
+  .form-card h3{font-size:20px;margin-bottom:6px;}
+  .form-card .sub{font-size:13px;color:#4A524D;margin-bottom:20px;}
+  .field{margin-bottom:16px;}
+  .field label{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    margin-bottom:6px;
+    color:var(--steel);
+  }
+  .field input,
+  .field textarea{
+    width:100%;
+    border:1px solid var(--line-soft);
+    background:var(--white);
+    padding:11px 12px;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:14px;
+    color:var(--ink);
+    border-radius:var(--radius);
+  }
+  .field textarea{resize:vertical;min-height:88px;}
+  .field input:focus,
+  .field textarea:focus{
+    outline:2px solid var(--steel);
+    outline-offset:1px;
+  }
+  .form-submit{
+    width:100%;
+    border:none;
+    cursor:pointer;
+    background:var(--amber);
+    color:var(--ink);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:13px;
+    border-radius:var(--radius);
+    transition:background .18s ease;
+  }
+  .form-submit:hover{background:#C88A22;}
+  .form-note{font-size:11.5px;color:#7C847D;margin-top:10px;}
+
+  /* ---------- footer ---------- */
+  footer{
+    padding:26px 0;
+    background:var(--ink);
+    border-top:1px solid #333B34;
+  }
+  .footer-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#9AA398;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:.04em;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .footer-row a{color:#C7CCC5;}
+  .footer-row a:hover{color:var(--amber);}
+
+  /* ---------- focus visibility ---------- */
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--amber);
+    outline-offset:2px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .product-card{transition:none;opacity:1;transform:none;}
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 980px){
+    .hero-grid{grid-template-columns:1fr;}
+    .stamp{display:none;}
+    .about-grid{grid-template-columns:1fr;}
+    .product-grid{grid-template-columns:repeat(2,1fr);}
+    .contact-grid{grid-template-columns:1fr;}
+  }
+
+  @media (max-width: 640px){
+    .wrap{padding:0 18px;}
+    .nav-links{display:none;}
+    .nav-cta{font-size:10px;padding:8px 12px;}
+    .hero{padding:56px 0 40px;}
+    .product-grid{grid-template-columns:1fr;}
+    .specs-list{grid-template-columns:1fr;}
+    .section-head{flex-direction:column;align-items:flex-start;}
+    footer .footer-row{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <span class="brand-mark">RAMIAT <span style="color:var(--steel)">INTL</span></span>
+      <span class="brand-sub">— Polymer &amp; Packaging Trade</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav-cta">Request Quote</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap" style="position:relative;">
+      <span class="stamp">Export&nbsp;Ready</span>
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Manufacturer &amp; Trading House</div>
+          <h1>PACKAGING<br>&amp; <span class="accent">POLYMERS</span><br>THAT MOVE.</h1>
+          <p class="hero-desc">Ramiat International supplies woven and non-woven PP bags, LDPE shrink film, flexible packaging, surface protection film and plastic resins to manufacturers, exporters and bulk packers.</p>
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">View Product Range ↓</a>
+            <a href="#contact" class="btn btn-ghost">Get a Quote</a>
+          </div>
+        </div>
+        <div class="manifest tick-frame">
+          <div class="manifest-head">
+            <span>Product Manifest</span>
+            <span>Qty / MOQ on Request</span>
+          </div>
+          <div class="manifest-item"><span>PP Woven Bags</span><span>01</span></div>
+          <div class="manifest-item"><span>PP Non-Woven Bags</span><span>02</span></div>
+          <div class="manifest-item"><span>LDPE Shrink Film</span><span>03</span></div>
+          <div class="manifest-item"><span>Flexible Packaging</span><span>04</span></div>
+          <div class="manifest-item"><span>Surface Protection Film</span><span>05</span></div>
+          <div class="manifest-item"><span>Plastic Resins</span><span>06</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule"></div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="section-num mono">01 / About</div>
+        <h2 style="margin-top:10px;">Built on Supply Reliability</h2>
+      </div>
+      <div class="about-copy">
+        <p>Ramiat International trades and supplies polymer-based packaging materials — from woven and non-woven PP bags to shrink film, flexible packaging, surface protection film and raw plastic resins.</p>
+        <p>We work with manufacturers, exporters, agro-processors and industrial packers who need consistent quality, competitive pricing and on-time dispatch.</p>
+        <div class="specs-list" style="margin-top:28px;">
+          <div class="spec">
+            <span class="spec-label">Product Lines</span>
+            <span class="spec-value">6 Core Categories</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Supply Type</span>
+            <span class="spec-value">Bulk &amp; Custom Orders</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Order Basis</span>
+            <span class="spec-value">Domestic &amp; Export</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Response Time</span>
+            <span class="spec-value">Quote within 24–48 hrs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="section-num mono">02 / Product Range</div>
+          <h2 style="margin-top:10px;">What We Supply</h2>
+        </div>
+        <p class="section-note">Each line below is available in custom sizes, gauges and finishes — reach out with your specification for a quote.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="product-grid">
+
+        <!-- PP Woven Bags -->
+        <div class="product-card">
+          <div class="product-top">
+            <span class="product-code mono">SKU · PPW-01</span>
+          </div>
+          <div class="product-icon">
+            <svg viewBox="0 0 120 120" fill="none" stroke="var(--steel)" stroke-width="1.6">
+              <rect x="30" y="18" width="60" height="88" rx="2"/>
+              <path d="M30 30h60M30 42h60M30 54h60M30 66h60M30 78h60M30 90h60" stroke-opacity=".55"/>
+              <path d="M42 18v88M54 18v88M66 18v88M78 18v88" stroke-opacity=".55"/>
+              <path d="M38 18l-4-10h52l-4 10" stroke="var(--amber)"/>
+            </svg>
+          </div>
+          <h3>PP Woven Bags</h3>
+          <p>Durable polypropylene woven sacks for bulk packing of grains, cement, fertilizer, sand and chemicals. Laminated or unlaminated, with optional liners.</p>
+          <div class="tag-row">
+            <span class="tag">25–50 kg</span>
+            <span class="tag">BOPP Lam.</span>
+            <span class="tag">Custom Print</span>
+          </div>
+        </div>
+
+        <!-- PP Non-Woven Bags -->
+        <div class="product-card">
+          <div class="product-top">
+            <span class="product-code mono">SKU · PPN-02</span>
+          </div>
+          <div class="product-icon">
+            <svg viewBox="0 0 120 120" fill="none" stroke="var(--steel)" stroke-width="1.6">
+              <path d="M34 40h52l6 62H28l6-62z"/>
+              <path d="M46 40v-8a14 14 0 0 1 28 0v8" />
+              <path d="M40 55c14 6 26 6 40 0" stroke-opacity=".5"/>
+              <path d="M38 70c16 7 28 7 44 0" stroke-opacity=".5"/>
+              <path d="M40 85c14 6 26 6 40 0" stroke-opacity=".5"/>
+              <circle cx="60" cy="34" r="2" fill="var(--amber)" stroke="none"/>
+            </svg>
+          </div>
+          <h3>PP Non-Woven Bags</h3>
+          <p>Reusable, eco-friendly non-woven fabric bags for retail, grocery and promotional use. Available with handles, gussets and custom branding.</p>
+          <div class="tag-row">
+            <span class="tag">60–150 GSM</span>
+            <span class="tag">Reusable</span>
+            <span class="tag">Recyclable</span>
+          </div>
+        </div>
+
+        <!-- LDPE Shrink Film -->
+        <div class="product-card">
+          <div class="product-top">
+            <span class="product-code mono">SKU · LSF-03</span>
+          </div>
+          <div class="product-icon">
+            <svg viewBox="0 0 120 120" fill="none" stroke="var(--steel)" stroke-width="1.6">
+              <circle cx="60" cy="60" r="34"/>
+              <circle cx="60" cy="60" r="26" stroke-opacity=".5"/>
+              <circle cx="60" cy="60" r="18" stroke-opacity=".5"/>
+              <circle cx="60" cy="60" r="6" fill="var(--amber)" stroke="none"/>
+              <path d="M60 26v-10M60 94v10M26 60h-10M94 60h10" stroke-opacity=".6"/>
+            </svg>
+          </div>
+          <h3>LDPE Shrink Film</h3>
+          <p>High-clarity low-density polyethylene film for bundling, palletizing and product wrap. Consistent shrink performance across gauges.</p>
+          <div class="tag-row">
+            <span class="tag">30–150 Micron</span>
+            <span class="tag">Roll / Sheet</span>
+            <span class="tag">Clear &amp; Tinted</span>
+          </div>
+        </div>
+
+        <!-- Flexible Packaging -->
+        <div class="product-card">
+          <div class="product-top">
+            <span class="product-code mono">SKU · FPK-04</span>
+          </div>
+          <div class="product-icon">
+            <svg viewBox="0 0 120 120" fill="none" stroke="var(--steel)" stroke-width="1.6">
+              <path d="M40 24h40l10 12v56a6 6 0 0 1-6 6H36a6 6 0 0 1-6-6V36z"/>
+              <path d="M30 36h60" stroke-opacity=".6"/>
+              <path d="M48 55h24" stroke="var(--amber)" stroke-dasharray="3 3"/>
+              <path d="M60 24v-8" stroke-opacity=".6"/>
+            </svg>
+          </div>
+          <h3>Flexible Packaging</h3>
+          <p>Laminated pouches and rollstock for food, FMCG and industrial goods — barrier films, stand-up pouches and printed laminates.</p>
+          <div class="tag-row">
+            <span class="tag">Multi-layer Lam.</span>
+            <span class="tag">Pouch / Rollstock</span>
+            <span class="tag">Barrier Grade</span>
+          </div>
+        </div>
+
+        <!-- Surface Protection Film -->
+        <div class="product-card">
+          <div class="product-top">
+            <span class="product-code mono">SKU · SPF-05</span>
+          </div>
+          <div class="product-icon">
+            <svg viewBox="0 0 120 120" fill="none" stroke="var(--steel)" stroke-width="1.6">
+              <rect x="22" y="66" width="76" height="30" rx="2"/>
+              <path d="M22 66c14-4 24-24 38-30 16-7 30 2 38 14" />
+              <circle cx="34" cy="80" r="10" stroke-opacity=".4"/>
+              <path d="M96 50a6 6 0 1 1 0 .1z" fill="var(--amber)" stroke="none"/>
+            </svg>
+          </div>
+          <h3>Surface Protection Film</h3>
+          <p>Self-adhesive protective film for metal sheets, glass, PVC and plastic panels — shields surfaces during transport, fabrication and storage.</p>
+          <div class="tag-row">
+            <span class="tag">Peelable</span>
+            <span class="tag">UV Stable</span>
+            <span class="tag">Custom Tack</span>
+          </div>
+        </div>
+
+        <!-- Plastic Resins -->
+        <div class="product-card">
+          <div class="product-top">
+            <span class="product-code mono">SKU · RES-06</span>
+          </div>
+          <div class="product-icon">
+            <svg viewBox="0 0 120 120" fill="none" stroke="var(--steel)" stroke-width="1.6">
+              <path d="M40 20h40l-4 14 12 8-4 40-24 18-24-18-4-40 12-8z"/>
+              <circle cx="52" cy="55" r="4" fill="var(--steel)" stroke="none" stroke-opacity=".7"/>
+              <circle cx="66" cy="60" r="4" fill="var(--amber)" stroke="none"/>
+              <circle cx="58" cy="72" r="4" fill="var(--steel)" stroke="none" stroke-opacity=".7"/>
+              <circle cx="70" cy="78" r="3" fill="var(--steel)" stroke="none" stroke-opacity=".5"/>
+            </svg>
+          </div>
+          <h3>Plastic Resins</h3>
+          <p>Virgin and reprocessed PP, LDPE, HDPE and PVC resins in granule form — supplied to spec for extrusion, injection and film-grade applications.</p>
+          <div class="tag-row">
+            <span class="tag">PP / LDPE / HDPE</span>
+            <span class="tag">Virgin &amp; Reprocessed</span>
+            <span class="tag">Bulk Bags</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-panel">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="eyebrow mono" style="color:var(--amber);">03 / Get in Touch</div>
+        <h2>Request a Quote</h2>
+        <p class="contact-desc">Tell us your product, quantity and delivery location — we'll come back with pricing and lead time.</p>
+
+        <div class="contact-list">
+          <div class="contact-row">
+            <span class="label">Phone</span>
+            <span class="value"><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a><small>Replace with your direct number</small></span>
+          </div>
+          <div class="contact-row">
+            <span class="label">WhatsApp</span>
+            <span class="value"><a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">+91 XXXXX XXXXX</a><small>Replace with your WhatsApp number</small></span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Email</span>
+            <span class="value"><a href="mailto:info@ramiatinternational.com">info@ramiatinternational.com</a><small>Replace with your business email</small></span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Address</span>
+            <span class="value">Your Company Address, City, State, PIN — India<small>Replace with your registered office / warehouse address</small></span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Hours</span>
+            <span class="value">Mon – Sat, 9:30 AM – 6:30 PM IST</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card tick-frame">
+        <h3>Send an Enquiry</h3>
+        <p class="sub">This form opens your email client with the message pre-filled — no backend required.</p>
+        <form id="enquiryForm">
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Requirement (product, quantity, location)</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Enquiry →</button>
+          <p class="form-note">Submitting opens a pre-filled email to info@ramiatinternational.com from your device.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© <span id="year"></span> Ramiat International. All rights reserved.</span>
+    <span>PP Woven · Non-Woven · LDPE Shrink Film · Flexible Packaging · Surface Protection Film · Resins</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // mailto-based enquiry form (no backend needed for static GitHub Pages hosting)
+  document.getElementById('enquiryForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const company = document.getElementById('company').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const body = `Name: ${name}%0D%0ACompany: ${company}%0D%0AEmail: ${email}%0D%0A%0D%0A${encodeURIComponent(message)}`;
+    window.location.href = `mailto:info@ramiatinternational.com?subject=${encodeURIComponent('Website Enquiry — ' + name)}&body=${body}`;
+  });
+
+  // reveal product cards on scroll
+  const cards = document.querySelectorAll('.product-card');
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach((entry, i)=>{
+        if(entry.isIntersecting){
+          setTimeout(()=>entry.target.classList.add('in'), i * 60);
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.15});
+    cards.forEach(c=>io.observe(c));
+  } else {
+    cards.forEach(c=>c.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
