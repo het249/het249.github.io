@@ -803,7 +803,7 @@
             <textarea id="message" name="message" required></textarea>
           </div>
           <button type="submit" class="form-submit">Send Enquiry →</button>
-          <p class="form-note">Submitting opens a pre-filled email to info@ramiatinternational.com from your device.</p>
+          <p class="form-note">Submitting opens a pre-filled email to sales@ramiatinternational.com from your device.</p>
         </form>
       </div>
     </div>
@@ -828,7 +828,7 @@
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
     const body = `Name: ${name}%0D%0ACompany: ${company}%0D%0AEmail: ${email}%0D%0A%0D%0A${encodeURIComponent(message)}`;
-    window.location.href = `mailto:info@ramiatinternational.com?subject=${encodeURIComponent('Website Enquiry — ' + name)}&body=${body}`;
+    window.location.href = `mailto:sales@ramiatinternational.com?subject=${encodeURIComponent('Website Enquiry — ' + name)}&body=${body}`;
   });
 
   // reveal product cards on scroll
